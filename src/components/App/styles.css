@@ -1,0 +1,13 @@
+.app {
+  width: 100%;
+  min-width: 320px;
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.app img {
+  max-width: 150px;
+}
