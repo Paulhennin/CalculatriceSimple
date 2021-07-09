@@ -43,7 +43,7 @@ export default function Calculatrice() {
     else if (input === '=') {
       const calcul = equalCalculator(input, currentValue);
       setCalcValue(calcul);
-      setCurrentValue('');
+      setCurrentValue(calcul);
     }
     else {
       setCurrentValue(`${currentValue}${input}`);

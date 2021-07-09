@@ -2,7 +2,7 @@ let state = [];
 let operator = '';
 
 export function isOperator(input) {
-  return input === '+' || input === '-' || input === '*' || input === '/' || input === '%';
+  return input === '+' || input === '-' || input === '*' || input === '/';
 }
 // pour plus tard
 export function isNotNumber(input) {
