@@ -22,7 +22,7 @@ export function clearHistory() {
 }
 
 export function calcul(input) {
-  let value = '';
+  let value = 0;
   if (state.length > 1) {
     console.log(state, operator);
     switch (operator) {
@@ -65,15 +65,11 @@ export function calcul(input) {
 }
 
 export function operatorCalculator(input, currentValue) {
-  let value = '';
+  let value = 0;
   state.push(currentValue);
   if (isOperator(input)) {
-    if (operator) {
-      value = calcul(input);
-    }
-    else {
-      operator = input;
-    }
+    operator = input;
+    value = calcul(input);
   }
   console.log(state, operator, value);
   // isOperator(input);
@@ -92,5 +88,23 @@ export function equalCalculator(input, currentValue) {
   value = calcul(input);
   state = [];
   operator = '';
+  return value;
+}
+
+export function percentCalculator(currentValue) {
+  let value = 0;
+  state.push(currentValue);
+  if (state.length > 1) {
+    value = (Number(state[0]) / Number(currentValue)) / 100;
+    state = [];
+    state.push(value);
+    operator = '';
+  }
+  else {
+    value = (Number(state[0])) / 100;
+    state[0] = (value);
+    operator = '';
+  }
+  console.log(state);
   return value;
 }

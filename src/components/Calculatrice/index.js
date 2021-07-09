@@ -8,6 +8,7 @@ import {
   clearHistory,
   isPosOrNeg,
   equalCalculator,
+  percentCalculator
 } from './calculator';
 
 export default function Calculatrice() {
@@ -31,7 +32,7 @@ export default function Calculatrice() {
     else if (isOperator(input)) {
       const calcul = operatorCalculator(input, currentValue);
       console.log(calcul, currentValue);
-      if (calcul === '') {
+      if (calcul === 0) {
         setCalcValue(currentValue);
       }
       else {
@@ -39,6 +40,11 @@ export default function Calculatrice() {
       }
       setCurrentValue('');
       setHistory(`${history}${input}`);
+    }
+    else if (input === '%') {
+      const calcul = percentCalculator(currentValue);
+      setCalcValue(calcul);
+      setCurrentValue('');
     }
     else if (input === '=') {
       const calcul = equalCalculator(input, currentValue);
