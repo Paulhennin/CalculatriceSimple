@@ -8,7 +8,7 @@
   min-width: 25%;
   width: 25%;
   &-last {
-    background-color: #FFE2BA;
+    background-color: #FEC7FF;
     border-right: 1px solid black;
   }
   &_last-row {
@@ -21,7 +21,8 @@
   color: white;
 }
 .validate {
-  background-color: lightblue;
+  background-color: #949ef5;
+  color: white;
 }
 
 .calc {
@@ -30,10 +31,13 @@
     height: 3rem;
     text-align: right;
     color: white;
-    background-color: #8BB395;
+    background-color: #C7CDFF;
+    font-size: 1.6rem;
+    margin: 1rem 0;
     border: none;
+    padding-right: 1rem;
     &::placeholder {
-      color: white;
+      color: rgb(93, 90, 102);
       font-weight: bold;
     }
   }
@@ -59,10 +63,14 @@
 
 .container {
   width: 100%;
-  color: #003F3F;
+  color: #6a4ef8;
   padding: 5%;
   font-weight: bold;
   font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .last_row {
