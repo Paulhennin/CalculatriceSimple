@@ -1,0 +1,84 @@
+
+.rowOne {
+  background-color: #9782B3;
+}
+.row, .rowOne, .last_row {
+  cursor: pointer;
+}
+.row {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #e6d3ff;
+}
+
+
+.last_row {
+  width: 100%;
+  display: grid;
+  background-color: #e6d3ff;
+  border-bottom: 1px solid black;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.btn {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  line-height: 3rem;
+  min-width: 25%;
+  width: 25%;
+  transition: all 0.3s ease-in;
+  &:hover {
+    background-color: #d5c3ec;
+  }
+  &-last {
+    background-color: #FEC7FF;
+    border-right: 1px solid black;
+  transition: all 0.3s ease-in;
+    &:hover {
+    background-color: #e3b2e4;
+    }
+  }
+  &_last-row {
+    width: 100%;
+  }
+  &:active {
+    background-color: rgba(47, 0, 255, 0.11);
+    animation: 1s linear onClick;
+}
+}
+.validate {
+  background-color: #949ef5;
+  color: white;
+  transition: all 0.3s ease-in;
+  &:hover {
+    background-color: #8890df;
+    }
+    &:active {
+      background-color: rgba(47, 0, 255, 0.11);
+  }
+}
+
+
+.cancel {
+  background-color: lightcoral;
+  transition: all 0.2s ease-in;
+  color: white;
+  &:hover {
+    background-color: rgb(223, 113, 113);
+    }
+    &:active {
+      background-color: red;
+  }
+}
+
+
+@keyframes onClick {
+0%{
+transform: scale(1)}
+100%{
+transform: scale(0.90);
+border: 2px solid black;}
+}

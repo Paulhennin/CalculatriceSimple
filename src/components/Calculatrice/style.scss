@@ -1,30 +1,5 @@
 @use 'src/styles/vars' as v;
 
-
-.btn {
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  line-height: 3rem;
-  min-width: 25%;
-  width: 25%;
-  &-last {
-    background-color: #FEC7FF;
-    border-right: 1px solid black;
-  }
-  &_last-row {
-    width: 100%;
-  }
-}
-
-.cancel {
-  background-color: lightcoral;
-  color: white;
-}
-.validate {
-  background-color: #949ef5;
-  color: white;
-}
-
 .calc {
   &__input {
     width: 100%;
@@ -49,18 +24,6 @@
   }
 }
 
-.rowOne {
-  background-color: #9782B3;
-}
-.row {
-  display: flex;
-  width: 100%;
-  height: 3rem;
-  flex-direction: row;
-  justify-content: space-evenly;
-  background-color: #e6d3ff;
-}
-
 .container {
   width: 100%;
   color: #6a4ef8;
@@ -71,12 +34,4 @@
   flex-direction: column;
   align-items: center;
 
-}
-
-.last_row {
-  width: 100%;
-  display: grid;
-  background-color: #e6d3ff;
-  border-bottom: 1px solid black;
-  grid-template-columns: 2fr 1fr 1fr;
 }
